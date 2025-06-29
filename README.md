@@ -1,2 +1,2 @@
 # web
-it contain html file
+It contains the html AND javascript file
