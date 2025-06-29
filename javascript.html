@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <title>Scope Example</title>
+</head>
+<body>
+<script>
+let globalVar = "I am global";
+
+function testScope() {
+  let functionVar = "I am inside a Function";
+
+  if (true) {
+    let blockVar = "I am inside if block";
+    document.write(blockVar,"<br>"); // Works: blockVar is accessible inside the if block
+  }
+
+  document.write(functionVar,"<br>"); // Works: functionVar is accessible inside the function
+  // document.write(blockVar); // Error: blockVar is not accessible outside the if block
+}
+
+testScope();
+
+document.write(globalVar,"<br>"); // Works: globalVar is accessible anywhere
+// document.write(functionVar); // Error: functionVar is not accessible outside the function
+</script>
+</body>
+</html>
